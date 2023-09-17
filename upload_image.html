@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Profile Picture</title>
+    <link rel="stylesheet" href="confirm.css">
+</head>
+<body>
+    <h1>Upload Profile Picture</h1>
+    <form action="upload_image.php" method="POST" enctype="multipart/form-data">
+        <label for="profile_picture">Select an image to upload:</label>
+        <input type="file" id="profile_picture" name="profile_picture" accept="image/*" required>
+        <br>
+        <img id="image_preview" src="#" alt="Image Preview" style="max-width: 300px; display: none;">
+        <br>
+        <button type="submit" name="action" value="save">Save</button>
+        <button type="button" id="skipBtn">Skip</button>
+        <button type="button" id="changeImageBtn">Change Image</button> <!-- Added button -->
+    </form>
+
+    <script>
+        // JavaScript to handle the "Change Image" button
+        document.getElementById('changeImageBtn').addEventListener('click', function() {
+            // Reset the file input field and hide the "Change Image" button
+            document.getElementById('profile_picture').value = '';
+            document.getElementById('image_preview').style.display = 'none';
+            this.style.display = 'none';
+        });
+
+        // JavaScript to preview the selected image
+        document.getElementById('profile_picture').addEventListener('change', function() {
+            const fileInput = this;
+            const imagePreview = document.getElementById('image_preview');
+            const changeImageButton = document.getElementById('changeImageBtn');
+
+            if (fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                    changeImageButton.style.display = 'block'; // Show the "Change Image" button
+                };
+
+                reader.readAsDataURL(fileInput.files[0]);
+            } else {
+                imagePreview.src = '#';
+                imagePreview.style.display = 'none';
+                changeImageButton.style.display = 'none'; // Hide the "Change Image" button
+            }
+        });
+
+        // JavaScript to handle the "Skip" button
+        document.getElementById('skipBtn').addEventListener('click', function() {
+            // Redirect the user to another page when they click "Skip"
+            window.location.href = 'another_page.html';
+        });
+    </script>
+</body>
+</html>

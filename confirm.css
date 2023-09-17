@@ -1,0 +1,94 @@
+/* Style the body and center the content */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+/* Style the header */
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Style the form container */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Style the file input and buttons */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Center the image horizontally and set width and height */
+img#image_preview {
+    width: 300px;
+    /* Set your desired width */
+    height: 300px;
+    /* Set your desired height */
+    margin: 20px auto;
+    /* Center horizontally */
+    display: block;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style the Skip button differently */
+button[type="button"] {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: #999;
+}
+
+/* Style the "Change Image" button */
+button#changeImageBtn {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+button#changeImageBtn:hover {
+    background-color: #999;
+}

@@ -6,265 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Version 2 Update Highlights</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            position: relative;
-            width: 90%;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            background: url(bg.jpg) no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-
-        header {
-            position: relative;
-            top: 0;
-            width: 100%;
-            height: 76px;
-            border-radius: 15px;
-            border: 1px solid #000;
-            background: rgba(173, 173, 173, 0.90);
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            padding: 30px 100px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        label {
-            display: none;
-        }
-
-
-        .navbar-logo img {
-            position: absolute;
-            top: 20%;
-            left: 0%;
-            width: 250px;
-            height: 50px;
-        }
-
-        #check {
-            z-index: 3;
-            display: none;
-        }
-
-        header .navigation a {
-            color: #ffffff;
-            font-size: 18px;
-            text-decoration: none;
-            font-weight: 500;
-            letter-spacing: 1px;
-            padding: 2px 15px;
-            border-radius: 20px;
-            transition: 0.3s;
-            transition-property: background;
-        }
-
-        header .navigation a:not(:last-child) {
-            margin-right: 30px;
-        }
-
-        header .navigation a:hover {
-            background: #ffffff;
-            color: #000;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h1 {
-            font-size: 20px;
-            color: #fff;
-            margin-bottom: 50px;
-            margin-top: 50px;
-            text-align: center;
-            border-radius: 15px;
-            border: 1px solid #000;
-            background: rgba(24, 24, 24, 0.9);
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            padding: 30px 50px;
-        }
-
-        .update-container1 {
-            margin-bottom: 20px;
-            width: 95%;
-            max-width: 600px;
-            margin: 10px 10;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.90);
-            border-radius: 15px;
-            background: rgba(177, 172, 172, 0.90);
-        }
-
-        .update-container2 {
-            margin-bottom: 20px;
-            width: 95%;
-            max-width: 600px;
-            margin: 10px 10;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.90);
-            border-radius: 15px;
-            background: rgba(177, 172, 172, 0.90);
-        }
-
-        .update-container3 {
-            margin-bottom: 20px;
-            max-width: 600px;
-            width: 95%;
-            margin: 10px 10;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.90);
-            border-radius: 15px;
-            background: rgba(177, 172, 172, 0.90);
-        }
-
-        .update-container4 {
-            margin-bottom: 20px;
-            width: 95%;
-            max-width: 800px;
-            margin: 10px 10;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.90);
-            border-radius: 15px;
-            background: rgba(177, 172, 172, 0.90);
-        }
-
-        .update-container5 {
-            margin-bottom: 20px;
-            width: 95%;
-            max-width: 800px;
-            margin: 10px 10;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.90);
-            border-radius: 15px;
-            background: rgba(177, 172, 172, 0.90);
-        }
-
-        .update-container6 {
-            margin-bottom: 20px;
-            width: 95%;
-            max-width: 800px;
-            margin: 10px 10;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.90);
-            border-radius: 15px;
-            background: rgba(177, 172, 172, 0.90);
-        }
-
-        .update-item h2 {
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .update-item p {
-            margin-top: 10px;
-            font-size: 16px;
-            display: none;
-            /* Initially hide the <p> tag */
-        }
-
-        /* Responsive CSS */
-
-        @media (max-width: 960px) {
-            header .navigation {
-                display: none;
-            }
-
-            label {
-                position: absolute;
-                margin-bottom: 20px;
-                left: 90%;
-                display: block;
-                font-size: 30px;
-                cursor: pointer;
-                transition: 0.3s;
-                transition-property: color;
-            }
-
-            label:hover {
-                color: #fff;
-            }
-
-            label .close-btn {
-                display: none;
-            }
-
-            #check:checked~header .navigation {
-                z-index: 2;
-                position: fixed;
-                top: 10%;
-                bottom: 50%;
-                left: 60%;
-                right: 2%;
-                border-radius: 15px;
-                background: rgba(0, 0, 0, 0.9);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            #check:checked~header .navigation a {
-                font-weight: 700;
-                margin-right: 0;
-                margin-top: 20px;
-                margin-bottom: 30px;
-                letter-spacing: 2px;
-            }
-
-            #check:checked~header label .close-btn {
-                z-index: 2;
-                position: fixed;
-                display: block;
-            }
-
-            #check:checked~header label .menu-btn {
-                display: none;
-            }
-
-            label .menu-btn {
-                position: absolute;
-            }
-
-            header .logo {
-                position: absolute;
-                bottom: -6px;
-            }
-
-        }
-
-        @media (max-width: 560px) {
-            .content {
-                font-size: 30px;
-            }
-
-            .content .info h2 {
-                font-size: 20px;
-                margin-left: 40px;
-                margin-top: 5px;
-                font-weight: 600;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="update.css">
 </head>
 
 <body>
@@ -285,46 +27,53 @@
         </label>
     </header>
     <h1>Version 2 Update Highlights</h1>
+    <h3>Click on the topics to Know more details.</h3>
 
     <div class="update-container1">
         <div class="update-item">
-            <h2 onclick="toggleVisibility(this)">Enhanced UI Design</h2>
-            <p>Our UI has received a significant facelift, featuring a new and improved profile page for a more
+            <h2 onclick="toggleVisibility(this)">Enhanced UI Design ▶</h2>
+            <p>The UI has received a significant facelift, featuring a new and improved Pages for a more
                 user-friendly experience.</p>
         </div>
     </div>
 
     <div class="update-container2">
         <div class="update-item">
-            <h2 onclick="toggleVisibility(this)">Advanced Security</h2>
-            <p>We've taken security to the next level by introducing 2-factor authentication. Your account is now
-                even
-                more secure.</p>
+            <h2 onclick="toggleVisibility(this)">Seamless Cloud-Based Data Storage ▶</h2>
+            <p>Say goodbye to data loss! We've upgraded to Seamless Cloud-Based Data Storage, ensuring your data stays
+                secure and accessible after resolving issues caused by drive crashes in our previous version.</p>
         </div>
     </div>
     <div class="update-container3">
         <div class="update-item">
-            <h2 onclick="toggleVisibility(this)">Password Management</h2>
-            <p>Changing your password is now easier than ever, ensuring you have complete control over your account
-                security.</p>
+            <h2 onclick="toggleVisibility(this)">Advanced Security ▶</h2>
+            <p>We've taken security to the next level by introducing 2-factor authentication. Your account is now
+                even more secure.</p>
         </div>
     </div>
     <div class="update-container4">
         <div class="update-item">
-            <h2 onclick="toggleVisibility(this)">Points System</h2>
-            <p>Introducing a points system that allows users to both purchase and earn points by watching ads,
-                offering more ways to engage with our platform.</p>
+            <h2 onclick="toggleVisibility(this)">Password Management ▶</h2>
+            <p>Changing your password is now easier than ever, ensuring you have complete control over your account
+                security.</p>
         </div>
     </div>
     <div class="update-container5">
         <div class="update-item">
-            <h2 onclick="toggleVisibility(this)">Transaction Transparency</h2>
-            <p>Get a detailed view of all your transactions with our new transaction history feature.</p>
+            <h2 onclick="toggleVisibility(this)">Points System ▶</h2>
+            <p>Introducing a points system that allows users to earn points by Transactions and Watching ads,
+                offering more ways to engage with our platform.</p>
         </div>
     </div>
     <div class="update-container6">
         <div class="update-item">
-            <h2 onclick="toggleVisibility(this)">Universal Access</h2>
+            <h2 onclick="toggleVisibility(this)">Transaction Transparency ▶</h2>
+            <p>Get a detailed view of all your Transactions with our new Transaction history feature.</p>
+        </div>
+    </div>
+    <div class="update-container7">
+        <div class="update-item">
+            <h2 onclick="toggleVisibility(this)">Universal Access ▶</h2>
             <p>Access our platform from anywhere, providing you with the flexibility to connect whenever
                 and
                 wherever you need it.</p>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="stylelogin1.css"> -->
+        <title>Login</title>
+        <style>
+        /* General styles */
+        body {
+            background: #abcdef;
+            font-family: Assistant, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .error-msg {
+            position: relative;
+            color: red;
+            font-size: 20px;
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+
+        .logo img {
+             position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 350px;
+    height: 55px;
+        }
+
+        /* .logo img {
+            height: 140px;
+        } */
+
+        .login {
+            color: white;
+            background: #0adbdb;
+            background: -webkit-linear-gradient(to right, #030e70, #0d809c);
+            background: linear-gradient(to right, #030e70, #065c6b);
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2), 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 30px 60px 1px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            width: 80%;
+            max-width: 400px;
+            padding: 50px;
+            text-align: center;
+        }
+
+
+        .login .head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login .head .company {
+            font-size: 1.5em;
+        }
+
+        .login .msg {
+            margin-top: 15px;
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+
+        .login .form input[type="email"],
+        .login .form input[type="password"] {
+            border: none;
+            background: none;
+            box-shadow: 0px 2px 0px 0px white;
+            width: 100%;
+            color: white;
+            margin-bottom: 50px;
+            font-size: 1.2em;
+            outline: none;
+        }
+
+        .login .form input[type="email"]::placeholder,
+        .login .form input[type="password"]::placeholder {
+            color: #d3d3d3;
+        }
+
+        .login .form .btn-login {
+            background: none;
+            text-decoration: none;
+            color: white;
+            font-size: 1.3em;
+            box-shadow: 0px 0px 0px 2px white;
+            border-radius: 3px;
+            margin-right: 220px;
+            padding: 5px 1.5em;
+            transition: 0.5s;
+        }
+
+        .login .form .btn-login:hover {
+            background: white;
+            color: dimgray;
+            transition: 0.5s;
+        }
+
+        .login .log {
+            text-decoration: none;
+            font-size: 1.4em;
+            text-decoration: underline;
+            color: white;
+            float: right;
+            ;
+        }
+
+        .login .log1 {
+            text-decoration: none;
+            font-size: 1.2em;
+            text-decoration: underline;
+            color: white;
+            float: right;
+            ;
+        }
+
+        .login .log:hover {
+            text-decoration: none;
+            font-size: 1.5em;
+            text-decoration: underline;
+            color: red;
+            float: right;
+            ;
+        }
+
+        .login .log1:hover {
+            text-decoration: none;
+            font-size: 1.2em;
+            text-decoration: underline;
+            color: red;
+            float: right;
+            ;
+        }
+
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            color: #136a8a;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer p {
+            display: inline;
+            font-size: 1em;
+            text-decoration: underline;
+        }
+
+        /* footer p:hover {
+            display: inline;
+            font-size: 1.5em;
+            color: black;
+            text-decoration: underline;
+        } */
+
+        /* Media queries */
+        @media (max-width: 768px) {
+            .login {
+                width: 90%;
+                padding: 30px;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Logo">
+                    </a>
+                </div>
+            </header>
+            <section class="login" id="login">
+                <form method="POST">
+                    <div class="head">
+                        <h1 class="company">User Login</h1>
+                    </div>
+                    <h5>This is a Demo Page </h5>
+                    <!-- <p class="msg">Welcome Back</p>
+            <?php if (isset($error)): ?>
+                <p class="error-msg">
+                    <?php echo $error; ?>
+                </p>
+            <?php endif; ?> -->
+                    <div class="form">
+                        <input
+                            type="email"
+                            id="email"
+                            class="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                        >
+                        <input
+                            type="password"
+                            id="password"
+                            class="password"
+                            name="password"
+                            placeholder="Password"
+                            required
+                            maxlength="8"
+                        >
+                        <a href="#" class="log1">Forgot Password</a>
+                        <button type="submit" class="btn-login" name="submit">Login</button>
+                        <a href="signup.html" class="log">SignUp</a>
+                    </div>
+                </form>
+            </section>
+            <footer>
+                <p>Created By Sumit Srivastava</p>
+                <br>
+                <p class="footer-text">T&C &copy; 2023 Chai Junction. All rights reserved.</p><br>
+                <p>
+                    version -- 2.1.1
+                </p>
+            </footer>
+        </body>
+    </html>
+
