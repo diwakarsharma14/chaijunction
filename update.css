@@ -1,3 +1,4 @@
+<style>
 * {
     margin: 0;
     padding: 0;
@@ -79,29 +80,15 @@ body {
 h1 {
     font-size: 20px;
     color: #fff;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
     text-align: center;
     border-radius: 15px;
     border: 1px solid #000;
     background: rgba(24, 24, 24, 0.9);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 30px 50px;
 }
-
-h3 {
-    font-size: 13px;
-    color: #fff;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    text-align: center;
-    border-radius: 15px;
-    border: 1px solid #000;
-    background: rgba(24, 24, 24, 0.9);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.85);
-    padding: 10px 10px;
-}
-
 
 .update-container1 {
     margin-bottom: 20px;
@@ -110,11 +97,11 @@ h3 {
     margin: 10px 10;
     padding: 10px;
     background-color: #fff;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.90);
     border-radius: 15px;
     background: rgba(177, 172, 172, 0.90);
-    animation: slideIn 1s ease-in-out;
-}
+    animation: slideIn 1s ease-in-out;       
+   }
 
 .update-container2 {
     margin-bottom: 20px;
@@ -123,10 +110,11 @@ h3 {
     margin: 10px 10;
     padding: 10px;
     background-color: #fff;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.90);
     border-radius: 15px;
     background: rgba(177, 172, 172, 0.90);
-    animation: slideIn 1.5s ease-in-out;
+
+animation: slideIn 1.5s ease-in-out;
 }
 
 .update-container3 {
@@ -136,79 +124,64 @@ h3 {
     margin: 10px 10;
     padding: 10px;
     background-color: #fff;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.90);
     border-radius: 15px;
     background: rgba(177, 172, 172, 0.90);
-    animation: slideIn 2s ease-in-out;
+animation: slideIn 2s ease-in-out;
 }
 
 .update-container4 {
     margin-bottom: 20px;
     width: 95%;
-    max-width: 600px;
+    max-width: 800px;
     margin: 10px 10;
     padding: 10px;
     background-color: #fff;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.90);
     border-radius: 15px;
     background: rgba(177, 172, 172, 0.90);
-    animation: slideIn 2.5s ease-in-out;
+animation: slideIn 2.5s ease-in-out;
 }
 
 .update-container5 {
     margin-bottom: 20px;
     width: 95%;
-    max-width: 600px;
+    max-width: 800px;
     margin: 10px 10;
     padding: 10px;
     background-color: #fff;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.90);
     border-radius: 15px;
     background: rgba(177, 172, 172, 0.90);
-    animation: slideIn 3s ease-in-out;
+animation: slideIn 2.8s ease-in-out;
 }
 
 .update-container6 {
     margin-bottom: 20px;
     width: 95%;
-    max-width: 600px;
+    max-width: 800px;
     margin: 10px 10;
     padding: 10px;
     background-color: #fff;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.90);
     border-radius: 15px;
     background: rgba(177, 172, 172, 0.90);
-    animation: slideIn 3.5s ease-in-out;
-}
-
-.update-container7 {
-    margin-bottom: 20px;
-    width: 95%;
-    max-width: 600px;
-    margin: 10px 10;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.85);
-    border-radius: 15px;
-    background: rgba(177, 172, 172, 0.90);
-    animation: slideIn 4s ease-in-out;
+animation: slideIn 3s ease-in-out;
 }
 
 @keyframes slideIn {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+0% {
+transform: translateY(-100%);
+opacity: 0;
 }
 
+100% {
+transform: translateY(0);
+opacity: 1;
+}
+}
 .update-item h2 {
     font-size: 18px;
-    text-decoration: underline;
     cursor: pointer;
 }
 
